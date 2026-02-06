@@ -78,7 +78,8 @@ color: "#111111", // Matte Black
     day: "Wednesday", 
     name: "GT’s Kombucha", 
     quote: "Gut health is wealth.", 
-color: "#D97706", // Warm Amber
+    image: "/images/kombucha.png",
+    color: "#D97706", // Warm Amber
     tags: ["Probiotic", "Ginger", "Wellness"]  },
   { 
     day: "Thursday", 
