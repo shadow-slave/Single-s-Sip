@@ -41,6 +41,10 @@ export default function AlcoholPage(){
     const isToday = currentIndex === todayIndex;
     const dayoffset = (currentIndex - todayIndex + 7) % 7;
     const displayDate = currentDate[dayoffset] || "Loading..."
+
+    const nextIndex = currentIndex === 6 ? 0 : currentIndex + 1;
+    const nextDrink = alcoholDrinks[nextIndex];
+    
     return(
         <div className="main min-h-screen flex flex-col md:flex-row ">
             <button  className="hidden md:flex text-stone-300 absolute top-1/2 left-3 text-lg z-50 md:hover:cursor-pointer hover:text-zinc-800  transition-all animate-slide-in-left duration-300 hover:translate-x-2" 
@@ -79,6 +83,19 @@ export default function AlcoholPage(){
              >
                  <Image  src={currentDrink.image} alt={currentDrink.name} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-contain"/>
              </div>
+
+
+             {/* Preloader */}
+             
+             <div className="hidden">
+                <Image 
+                    src={nextDrink.image} 
+                    alt="Preload" 
+                    width={10} 
+                    height={10} 
+                    priority={true} // Force browser to fetch it now
+                />
+            </div>
          </div>
     )
 }
