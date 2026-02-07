@@ -5,7 +5,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
+    <div className="relative h-dvh flex flex-col md:flex-row overflow-hidden">
       
       <div className="w-full md:w-1/2 h-[50vh] md:h-screen bg-[#f8f5f2] flex flex-col items-center justify-center p-10 hover:bg-white transition-colors duration-500 group border-b md:border-b-0 md:border-r border-gray-200">
         <h2 className="text-sm tracking-[0.3em] uppercase text-gray-400 mb-4 font-sans">
